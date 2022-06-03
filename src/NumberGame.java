@@ -8,16 +8,16 @@ public class NumberGame {
         String playerName = "";
         int playerGuess = 0;
         Scanner sc = new Scanner(System.in);
-        String gameStart = "Lets play Guess the Number!+\n" +
+        String gameStart = "Lets play Guess the Number!\n"+
                 "I am thinking of a number from 1-20, can you guess it in 6 tries or less?";
-        String newGame = "";
         boolean keepPlaying = true;
 
 
         //start display info.
         System.out.print("Welcome! ");
         playerName = getPlayerName(sc);
-        System.out.println("Ok " + playerName + " lets start the game.");
+        System.out.println(gameStart);
+        System.out.println("\nOk " + playerName + " lets start the game.");
         //start overall game loop.
         while (keepPlaying) {
             //generate random number 1-20 for computer.
@@ -60,8 +60,6 @@ public class NumberGame {
     //read input for player guess, validate that it is an integer and return.
     public static int getPlayerGuess(Scanner sc,int counter){
         boolean check = true;
-        boolean validEntry = false;
-
         String input = null;
         int guess = 0;
 
@@ -101,7 +99,6 @@ public class NumberGame {
             if (!input.isEmpty()) {
                 if (input.equalsIgnoreCase("n")) {
                     check = false;
-                    newGame = false;
                 } else if (input.equalsIgnoreCase("y")) {
                     newGame = true;
                     check = false;
