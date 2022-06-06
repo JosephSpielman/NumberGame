@@ -45,14 +45,15 @@ public class NumberGame {
     public static String getPlayerName(Scanner sc) {
         boolean check = true;
         String name = null;
-        while (check) {
+        while (check)
+        try {
             System.out.println("Enter your name:");
             name = sc.nextLine();
             if (!name.isEmpty()) {
                 check = false;
-            } else {
-                System.out.println("Aww don't be shy.");
             }
+        }
+        catch(Exception e){
         }
         return name;
     }
@@ -66,7 +67,6 @@ public class NumberGame {
         while(check){
             System.out.println("Turn:"+counter+" Guess a number:");
             input = sc.nextLine();
-
             if(!input.isEmpty()){
                 try {
                     guess = Integer.parseInt(input);
@@ -97,15 +97,17 @@ public class NumberGame {
             System.out.println("Would you like to play again? y/n");
             input = sc.nextLine();
             if (!input.isEmpty()) {
-                if (input.equalsIgnoreCase("n")) {
-                    check = false;
-                } else if (input.equalsIgnoreCase("y")) {
-                    newGame = true;
-                    check = false;
-                }
-            } else {
+                try{
+                    if (input.equalsIgnoreCase("n")) {
+                        check = false;
+                    } else if (input.equalsIgnoreCase("y")) {
+                        newGame = true;
+                        check = false;
+                    }
+            } catch(Exception e) {
                 System.out.println("Invalid entry! Please type y or n");
             }
+        }
         }
         return newGame;
     }
