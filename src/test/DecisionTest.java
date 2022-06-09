@@ -26,8 +26,5 @@ class DecisionTest {
     void getPlayerName(){
         assertEquals("Jim",Decision.getPlayerName("Jim"));
     }
-    @Test
-    void yesContinuePlaying(){assertEquals(true,Decision.continuePlaying("y"));}
-    @Test
-    void noContinuePlaying(){assertEquals(false,Decision.continuePlaying("n"));}
+
 }

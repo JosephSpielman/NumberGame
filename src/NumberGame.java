@@ -13,7 +13,6 @@ public class NumberGame {
                 "I am thinking of a number from 1-20, can you guess it in 6 tries or less?";
         boolean keepPlaying = true;
 
-
         //start display info.
         System.out.print("Welcome! ");
         //playerName = getPlayerName(sc);
@@ -49,77 +48,6 @@ public class NumberGame {
         }
         System.out.print("Thanks for playing!");
     }
-/*
-    //validate that name input is present.
-    public static String getPlayerName(Scanner sc) {
-        boolean check = true;
-        String name = null;
-        while (check)
-        try {
-            System.out.println("Enter your name:");
-            name = sc.nextLine();
-            if (!name.isEmpty()) {
-                check = false;
-            }
-        }
-        catch(Exception e){
-        }
-        return name;
-    }
 
-    //read input for player guess, validate that it is an integer and return.
-    public static int getPlayerGuess(Scanner sc,int counter){
-        boolean check = true;
-        String input = null;
-        int guess = 0;
-
-        while(check){
-            System.out.println("Turn:"+counter+" Guess a number:");
-            input = sc.nextLine();
-            if(!input.isEmpty()){
-                try {
-                    guess = Integer.parseInt(input);
-                    check =false;
-                }catch(Exception e){
-                    System.out.println("Invalid entry! Please guess an Integer");
-                }
-            }
-        }
-        return guess;
-    }
-    //determine if player guess was too high or low.
-    public static void incorrectMessage(int comp,int player){
-        if(comp > player){
-            System.out.println("Your guess was too low.");
-        }else{
-            System.out.println("Your guess was too high.");
-        }
-    }
-    //read user input for a new game. Validate that input is present and is either 'y'or 'n'. Return decision.
-    public static boolean continuePlaying(Scanner sc) {
-
-        String input = null;
-        boolean newGame = false;
-        boolean check = true;
-
-        while (check) {
-            System.out.println("Would you like to play again? y/n");
-            input = sc.nextLine();
-            if (!input.isEmpty()) {
-                try{
-                    if (input.equalsIgnoreCase("n")) {
-                        check = false;
-                    } else if (input.equalsIgnoreCase("y")) {
-                        newGame = true;
-                        check = false;
-                    }
-            } catch(Exception e) {
-                System.out.println("Invalid entry! Please type y or n");
-            }
-        }
-        }
-        return newGame;
-    }
-    */
 }
 
